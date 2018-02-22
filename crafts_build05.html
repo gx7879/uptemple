@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link href="http://fonts.googleapis.com/earlyaccess/cwtexhei.css" rel="stylesheet" type="text/css" />
+<title>工藝與建築之美</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/fullscreenstyle.css" rel="stylesheet" type="text/css" />
+<link href="css/pagestyle.css" rel="stylesheet" type="text/css" />
+
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/jquery.fullscreenslides.js"></script>
+<script id="sample">
+$(function(){
+  // initialize the slideshow
+  $('.image img').fullscreenslides();
+  
+  // All events are bound to this container element
+  var $container = $('#fullscreenSlideshowContainer');
+  
+  $container
+    //This is triggered once:
+    .bind("init", function() { 
+
+      // The slideshow does not provide its own UI, so add your own
+      // check the fullscreenstyle.css for corresponding styles
+      $container
+        .append('<div class="ui" id="fs-close"></div>')
+        .append('<div class="ui" id="fs-loader">Loading...</div>')
+        .append('<div class="ui" id="fs-prev"></div>')
+        .append('<div class="ui" id="fs-next"></div>')
+        .append('<div class="ui" id="fs-caption"><span></span></div>');
+      
+      // Bind to the ui elements and trigger slideshow events
+      $('#fs-prev').click(function(){
+        // You can trigger the transition to the previous slide
+        $container.trigger("prevSlide");
+      });
+      $('#fs-next').click(function(){
+        // You can trigger the transition to the next slide
+        $container.trigger("nextSlide");
+      });
+      $('#fs-close').click(function(){
+        // You can close the slide show like this:
+        $container.trigger("close");
+      });
+      
+    })
+    // When a slide starts to load this is called
+    .bind("startLoading", function() { 
+      // show spinner
+      $('#fs-loader').show();
+    })
+    // When a slide stops to load this is called:
+    .bind("stopLoading", function() { 
+      // hide spinner
+      $('#fs-loader').hide();
+    })
+    // When a slide is shown this is called.
+    // The "loading" events are triggered only once per slide.
+    // The "start" and "end" events are called every time.
+    // Notice the "slide" argument:
+    .bind("startOfSlide", function(event, slide) { 
+      // set and show caption
+      $('#fs-caption span').text(slide.title);
+      $('#fs-caption').show();
+    })
+    // before a slide is hidden this is called:
+    .bind("endOfSlide", function(event, slide) { 
+      $('#fs-caption').hide();
+    });
+});
+</script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script language=JavaScript>
+<!--
+
+//Disable right click script III- By Renigade (renigade@mediaone.net)
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="";
+///////////////////////////////////
+function clickIE() {if (document.all) {(message);return false;}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(message);return false;}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+
+<SCRIPT language=JavaScript>
+<!-- begin
+document.onmousedown=click;
+document.onkeydown=click;
+if (document.layers) window.captureEvents(Event.MOUSEDOWN); window.onmousedown=click;
+if (document.layers) window.captureEvents(Event.KEYDOWN); window.onkeydown=click;
+function click(e){
+if (navigator.appName == 'Netscape'){
+if (e.which != 1){
+return false;}}
+if (navigator.appName == "Microsoft Internet Explorer"){
+if (event.button != 1){
+return false;}}}
+// end -->
+</SCRIPT>
+</head>
+
+<body ONDRAGSTART="window.event.returnValue=false" onSelectStart="event.returnValue=false" ONCONTEXTMENU="window.event.returnValue=false" onload="MM_preloadImages('images/googlemapon.jpg','images/navimg01_on.png','images/navimg02_on.png','images/navimg03_on.png','images/navimg04_on.png','images/navimg05_on.png','images/navimg06_on.png','images/navimg07_on.png')">
+<div id="wrap">
+<div id="wrap">
+  <header>
+    <a href="index.html" style="width:100%;"><div class="logo"><img src="images/logo.png" width="418" height="130" /></div></a>
+    <div class="banner"><img src="images/03.jpg" width="1920" height="515" /></div>
+      <nav style="background-image:url(images/nav.jpg)">
+      <ul>
+        <li><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg01','','images/navimg01_on.png',1)"><img src="images/navimg01.png" width="141" height="122" id="navimg01" /></a></li>
+        <li><a href="about.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg02','','images/navimg02_on.png',1)"><img src="images/navimg02.png" width="141" height="122" id="navimg02" /></a></li>
+        <li><a href="crafts_build.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg03','','images/navimg03_on.png',1)"><img src="images/navimg03.png" width="141" height="122" id="navimg03" /></a></li>
+        <li><a href="buddha.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg04','','images/navimg04_on.png',1)"><img src="images/navimg04.png" width="141" height="122" id="navimg04" /></a></li>
+        <li><a href="celebration.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg05','','images/navimg05_on.png',1)"><img src="images/navimg05.png" width="141" height="122" id="navimg05" /></a></li>
+        <li><a href="view.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg06','','images/navimg06_on.png',1)"><img src="images/navimg06.png" width="141" height="122" id="navimg06" /></a></li>
+        <li style="margin-left:1px;"><a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg07','','images/navimg07_on.png',1)"><img src="images/navimg07.png" width="139" height="122" id="navimg07" /></a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    <div class="maincontent">
+      <div class="leftcontent">
+        <div class="leftmenu">
+          <p><img src="images/menuimg.png" width="254" height="77" /></p>
+          <ul>
+            <a href="crafts_build.html"><li>大木結構</li></a>
+            <a href="crafts_build01.html"><li>泥陶塑造</li></a>
+            <a href="crafts_build02.html"><li>石作石雕</li></a>
+            <a href="crafts_build03.html"><li style="height:40px;line-height: 20px; padding-top: 20px;padding-bottom: 18px;">精雕木作<br />
+            <span style="font-size:13px;">(大木/細木)</span></li></a>
+            <a href="crafts_build06.html"><li>黃龜理細木圖文介紹</li></a>
+            <a href="crafts_build04.html"><li style="height:40px;line-height: 20px; padding-top: 20px;padding-bottom: 18px;">繁華彩繪<br />
+            <span style="font-size:13px;">(四大壁畫/六大門神/全廟彩繪)</span></li></a>
+            <a href="crafts_build05.html" class="triangle"><li class="menu_click">匾額楹聯</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="rightcontent"> 
+        <!--這裡是精雕木作-->
+        <div id="creatcontent06" class="maincontenter">
+          <div class="centercontent"><img src="images/menubg.png" width="279" height="100%"/></div>
+          <div style="width:674px; float:left; margin-left:47px;">
+            <p>匾額楹聯</p>
+            <span><div class="creat01" style="background-image:url(images/icon12.png)">
+              <p style="border:none; margin-bottom:20px; font-size:13px; margin-left:48px; color:#000000; line-height:38px; height:38px;">本巖的碑匾楹聯均為當時知名文人雅士的珍貴墨寶。</p></div>
+              <div class="imgbox">
+              <div class="imgcontent">
+              <div class="leftbox">
+              <p style="width:290px; font-size:13px; line-height:26px; color:#000000; height:26px; margin-bottom:1px;">1.應化街牌樓正面/1979曹容/泰山巖</p>
+              <img src="images/img03/imgcontent03-09-01.jpg" width="290" height="98" /></div>
+              <div class="rightbox">
+              <p style="width:290px; font-size:13px; line-height:26px; color:#000000; height:26px; margin-bottom:1px;">2.應化街牌樓背面/1979曹容/功參造化</p>
+              <img src="images/img03/imgcontent03-09-02.jpg" width="290" height="98" /></div>
+              </div>
+              <div class="imgcontent">
+              <div class="leftbox">
+              <p style="width:290px; font-size:13px; line-height:26px; color:#000000; height:26px; margin-bottom:1px;">3.前殿封柱間背面/1935慈祐宮/天鑑在茲</p>
+              <img src="images/img03/imgcontent03-09-03.jpg" width="290" height="98" /></div>
+              <div class="rightbox">
+              <p style="width:290px; font-size:13px; line-height:26px; color:#000000; height:26px; margin-bottom:1px;">4.前殿後金柱/1907秀才劉建忠/萬古英靈</p>
+              <img src="images/img03/imgcontent03-09-04.jpg" width="290" height="98" /></div>
+              </div>
+              <div class="imgcontent">
+              <div class="leftbox">
+              <p style="width:290px; font-size:13px; line-height:26px; color:#000000; height:26px; margin-bottom:1px;">5.龍門廳凹壽門額/1934洪雍平/壯觀瞻</p>
+              <img src="images/img03/imgcontent03-09-05.jpg" width="290" height="98" /></div>
+              <div class="rightbox">
+              <p style="width:290px; font-size:13px; line-height:26px; color:#000000; height:26px; margin-bottom:1px;">6.虎門廳凹壽門額/1934洪雍平/昭赫濯</p>
+              <img src="images/img03/imgcontent03-09-06.jpg" width="290" height="98" />
+              </div>
+              </div>
+              <div class="creat01" style="background-image:url(images/icon23.png)">
+              <p style="border:none; margin-bottom:20px; font-size:13px; margin-left:48px; color:#000000; line-height:38px; height:38px;">本巖的楹聯均為當時知名文人雅士的珍貴墨寶。</p></div>
+              <div class="imgcontent">
+              <div style="height:464px; margin-bottom:1px;">
+              <div class="contentimg" style="margin-right:20px;">
+              <p style="letter-spacing: 0.1em;">7.前殿中門門聯/<br /><span style="margin-left:13px; width:0px;; display:inline-block; margin-top:0px;"></span>1933秀才李聲元</p>
+              <img src="images/img03/imgcontent03-09-07.jpg" width="130" height="411" /></div>
+              <div class="contentimg" style="margin-right:20px;">
+              <p style="letter-spacing: 0.1em;">8.前殿左門門聯 /<br /><span style="margin-left:13px; width:0px;; display:inline-block; margin-top:0px;"></span>1933歲貢李種玉</p>
+              <img src="images/img03/imgcontent03-09-08.jpg" width="130" height="411" /></div>
+              <div class="contentimg" style="margin-right:20px;">
+              <p style="letter-spacing: 0.1em;">9.前殿右門門聯 /<br /><span style="margin-left:13px; width:0px;; display:inline-block; margin-top:0px;"></span>1933名家李逸樵</p>
+              <img src="images/img03/imgcontent03-09-09.jpg" width="130" height="411" /></div>
+              <div class="contentimg">
+              <p style="letter-spacing: 0.1em;">10.前殿封柱聯 /<br /><span style="margin-left:23px; width:0px;; display:inline-block; margin-top:0px;"></span>1933名家林希元</p>
+              <img src="images/img03/imgcontent03-09-10.jpg" width="130" height="411" /></div></div>
+              <div style="height:451px;">
+              <div class="contentimg" style="margin-right:20px;">
+              <p style="letter-spacing: 0.1em;">11.前殿角柱聯 /<br /><span style="margin-left:23px; width:0px;; display:inline-block; margin-top:0px;"></span>1933舉人張書紳</p>
+              <img src="images/img03/imgcontent03-09-11.jpg" width="130" height="411" /></div>
+              <div class="contentimg" style="margin-right:20px;">
+              <p style="letter-spacing: 0.1em;">12.前殿後點金柱 /<br /><span style="margin-left:23px; width:0px;; display:inline-block; margin-top:0px;"></span>1933名家黃贊鈞</p>
+              <img src="images/img03/imgcontent03-09-12.jpg" width="130" height="411" /></div>
+              <div class="contentimg" style="margin-right:20px;">
+              <p style="letter-spacing: 0.1em;">13.過水廊後楹柱 /<br /><span style="margin-left:23px; width:0px;; display:inline-block; margin-top:0px;"></span>1933書法家曹容</p>
+              <img src="images/img03/imgcontent03-09-13.jpg" width="130" height="411" /></div>
+              <div class="contentimg">
+              <p style="letter-spacing: 0.1em;">14.正殿前點金柱 /<br /><span style="margin-left:23px; width:0px;; display:inline-block; margin-top:0px;"></span>1933名家李讚生</p>
+              <img src="images/img03/imgcontent03-09-14.jpg" width="130" height="411" /></div></div>
+              </div>
+              </div>
+              <div class="creat01" style="background-image:url(images/icon24.png)">
+              <p style="border:none; margin-bottom:20px; font-size:13px; margin-left:48px; color:#000000; line-height:38px; height:38px;">本巖對聯聯句</p>
+              </div>
+              <div class="table">
+              <div class="tr01" style="background-image:none;">
+                <div class="td06">位置</div>
+                <div class="td07">年分</div>
+                <div class="td08">作者</div>
+                <div class="td09">對聯聯句</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">前殿中門</div>
+                <div class="td07">1933年</div>
+                <div class="td08">李聲元</div>
+                <div class="td09">泰岳鐘靈 顯著祖謨朝北闕；<br />
+                山峰挺秀 應知師德被東瀛。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">前殿左門</div>
+                <div class="td07">1933年</div>
+                <div class="td08">李種玉</div>
+                <div class="td09">泰水來朝 入廟顯呼老祖；<br />
+                山靈默護 登堂應拜先師。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">前殿右門</div>
+                <div class="td07">1933年</div>
+                <div class="td08">李逸樵</div>
+                <div class="td09">泰不驕 顯應之餘聲赫赫；<br />
+                山獻秀 祖師所托石巖巖。 </div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">前殿封柱</div>
+                <div class="td07">1933年</div>
+                <div class="td08">林希元</div>
+                <div class="td09">泰嶽顯神威 萬眾咸稱聖祖；<br />
+                山川應景運 群生受庇先師。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">前殿角柱</div>
+                <div class="td07">1933年</div>
+                <div class="td08">張書紳</div>
+                <div class="td09">泰岱鍾靈 顯著奇方欽祖德；<br />
+                山川毓秀 應閎法宇表師功。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">前殿後金柱</div>
+                <div class="td07">1933年</div>
+                <div class="td08">黃贊鈞</div>
+                <div class="td09">泰運庇蒼生 法雨千秋潤瀛島；<br />
+                山峰迴碧殿 祥雲萬朵接蓬萊。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">前廊柱</div>
+                <div class="td07">1933年</div>
+                <div class="td08">鄭永南</div>
+                <div class="td09">泰道微濛 日見慈雲生佛座；<br />
+                山靈不昧 時隨法雨庇人民。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">後廊柱</div>
+                <div class="td07">1933年</div>
+                <div class="td08">曹秋圃</div>
+                <div class="td09">顯千百億個化身保障民安國泰；<br />
+                應四十八願度世 讚宣鹿苑魚山。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">正殿前金柱</div>
+                <div class="td07">1933年</div>
+                <div class="td08">李讚生</div>
+                <div class="td09">顯性通靈 淡北民生稱老祖；<br />
+                應時救世 瀛東士庶頌良師。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">正殿後金柱</div>
+                <div class="td07">1933年</div>
+                <div class="td08">張書紳</div>
+                <div class="td09">廣濟生民仁術顯 施安四境；<br />
+                重新廟貌慈雲應 感足千秋。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">正殿後副金柱</div>
+                <div class="td07">1933年</div>
+                <div class="td08">劉建忠</div>
+                <div class="td09">顯爾英靈 乃神乃聖；<br />
+                應人祈禱 無黨無偏。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:39px;">
+                <div class="td06">正殿左窗</div>
+                <div class="td07">1933年</div>
+                <div class="td08">胡玉樹(子庭)</div>
+                <div class="td09">松風度檻入情詩；竹月橫窗成畫本。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:39px;">
+                <div class="td06">正殿右窗</div>
+                <div class="td07">1933年</div>
+                <div class="td08">胡玉樹(子庭)</div>
+                <div class="td09">半夜書聲月在天；一簾花影雲拖地。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">龍門廳</div>
+                <div class="td07">1933年</div>
+                <div class="td08">胡玉樹</div>
+                <div class="td09">顯出乎微 無微不達；<br />
+                應因有感 有感斯通。</div></div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">虎門廳</div>
+                <div class="td07">未題</div>
+                <div class="td08">未題</div>
+                <div class="td09">祖澤覃敷 萬民共仰；<br />
+                師恩普被 四海同欽。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">鐘樓<br />
+                </div>
+                <div class="td07">未題</div>
+                <div class="td08">未題</div>
+                <div class="td09">樓聳泰山 鐘聲遠度；<br />
+                天開淨域 禪味深含。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">鼓樓</div>
+                <div class="td07">未題 </div>
+                <div class="td08">未題 </div>
+                <div class="td09">山閣梵經 資修德性；<br />
+                雲巖法鼓 喚醒癡迷。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:39px;">
+                <div class="td06" style="width:151px; margin-right:204px;">龍山福德正神祠門聯</div>
+                <div class="td09">福賜人心秉正；德高天命為神。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:39px;">
+                <div class="td06">廟埕石燈籠內聯</div>
+                <div class="td07">1934年</div>
+                <div class="td08">胡玉樹</div>
+                <div class="td09">明照千江月，清涵萬里天。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:39px;">
+                <div class="td06">廟埕石燈籠外聯</div>
+                <div class="td07">1934年</div>
+                <div class="td08">胡玉樹</div>
+                <div class="td09">神光欣普照，佛法慶咸沾。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:39px;">
+                <div class="td06">入口石燈籠內聯</div>
+                <div class="td07">1934年</div>
+                <div class="td08">胡玉樹</div>
+                <div class="td09">顯慧日而返照；應法雲以極光。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">入口石燈籠外聯</div>
+                <div class="td07">1934年</div>
+                <div class="td08">胡玉樹</div>
+                <div class="td09">泰嶽凌雲聳，山川奠月明。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">牌樓正面兩內柱</div>
+                <div class="td07">1978年</div>
+                <div class="td08">余俊賢</div>
+                <div class="td09">寶筏渡迷津和尚洲潮環廟宇；<br />
+                金繩開覺路觀音嶺月照牌樓。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">牌樓正面兩外柱</div>
+                <div class="td07">1978年</div>
+                <div class="td08">倪登玉</div>
+                <div class="td09">顯示安民 壯麗牌樓 宣祖德；<br />
+                應機保國 莊嚴廟宇 答師恩。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">牌樓背面兩內柱</div>
+                <div class="td07">1978年</div>
+                <div class="td08">張鶴</div>
+                <div class="td09">泰運回春 殿宇重新 香火盛；<br />
+                山靈毓秀 神威長護 庶民安。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:65px;">
+                <div class="td06">牌樓背面兩外柱</div>
+                <div class="td07">1978年</div>
+                <div class="td08">郭半村</div>
+                <div class="td09">顯化指迷津 祖德感民已久；<br />
+                應時開覺路 師恩惠眾無疆。</div>
+              </div>
+              <div class="tr02 borderbottom" style="height:39px;">
+                <div class="td06">仁義亭楹聯</div>
+                <div class="td07">1986年</div>
+                <div class="td08">李嘉欽</div>
+                <div class="td09">仁能及物斯為大；義薄於天本自高。</div>
+              </div>
+              </div>
+            </span></div>
+        </div>
+        <!--這裡是精雕木作結束-->
+      </div>
+    </div>
+  </div>
+  <footer>
+<div class="fc">
+<div class="column">
+<div class="flogo"><img src="images/footer.png" width="331" height="164" /></div>
+<div class="finfo">
+<p>地址  │   新北市泰山區應化街32號</p>
+<p>電話  │   (02)29018371</p>
+<p>傳真  │   (02)29042420</p>
+<p>信箱  │    <a href="mailto:up.temple@msa.hinet.net">up.temple@msa.hinet.net</a></p>
+</div>
+</div>
+<div class="column" style="line-height:25px; margin-top:45px;">
+<div class="cl" style="font-size:15px; line-height:25px;">
+  <h3>關於頂泰山巖 </h3>
+  <p><a href="about.html">頂泰山巖簡介</a></p>
+        <p><a href="about01.html">金面顯應祖師</a></p>
+        <p><a href="about02.html">大事年表</a></p>
+        <p><a href="about03.html">歷次整建</a></p>
+        <p><a href="about04.html">董監事會</a></p>
+        <p style="font-family: "cwTeXHei";"><a href="about05.html">分靈廟</a></p>
+</div>
+<div class="cc" style="font-size:15px; line-height:25px;">
+  <h3>工藝與建築之美 </h3>
+  <p><a href="crafts_build.html">大木結構</a></p>
+        <p><a href="crafts_build01.html">泥陶塑造</a></p>
+        <p><a href="crafts_build02.html">石作石雕</a></p>
+        <p><a href="crafts_build03.html">精雕木作</a></p>
+        <p><a href="crafts_build04.html">繁華彩繪</a></p>
+        <p><a href="crafts_build05.html">匾額楹聯</a></p>
+</div>
+<div class="cr" style="font-size:15px; line-height:25px;">
+  <h3>奉祀神佛 </h3>
+  <p><a href="buddha.html">參拜路線圖</a></p>
+</div>
+</div>
+</div>
+<div class="copyright">財團法人新北市泰山巖版權所有‧轉載必究　2015 Copyright © UpTemple. All Right Reserved.　資料提供：本巖顧問、新北市泰山區文史協會創會理事長 張仁甫.　網頁設計by<a href="http://www.chrisliou.com" target="_blank">克里斯劉設計工作室</a></div>
+</footer>
+</div>
+</body>
+</html>

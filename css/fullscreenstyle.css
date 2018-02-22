@@ -1,0 +1,89 @@
+#fullscreenSlideshowContainer .ui {
+  position: absolute;
+  font-family: Arial, cwTeXHei;
+  z-index: 10; 
+  font-size: 2em;
+}
+
+#fs-loader,
+#fs-prev,
+#fs-next,
+#fs-close {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1em;
+}
+
+#fs-close {
+  top: 0;
+  right: 0;
+  background-image:url(../images/Cbtn.png);
+  width:45px;
+  height:45px;
+}
+
+#fs-close:hover{
+	background-position:0px -45px;
+	}
+
+#fs-prev,
+#fs-next {
+  top: 50%;
+  margin-top: -1em; 
+  background-image:url(../images/RLbtn.png);
+  width:45px;
+  height:45px;
+}
+
+#fs-prev {
+  left: 0;
+}
+
+#fs-prev:hover{
+	background-position:0 -45px;
+	}
+
+#fs-next {
+  right: 0;
+  background-position:45px 0px;
+}
+
+#fs-next:hover{
+	background-position:45px -45px;
+	}
+
+#fs-loader {
+  top: 50%;
+  left: 50%;
+  height: 1em;
+  margin-top: -1em;
+  margin-left: -75px;
+  display: none;
+}
+
+#fs-caption {
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  max-width:1920px;
+  left: 0;
+  line-height: 1em;
+  display: none;
+}
+
+#fs-caption span {
+  background-color:rgba(0,0,0,0.5);
+  color:#FFFFFF;
+  letter-spacing:0.15em;
+  width:100%;
+  display:block;
+  height:50px;
+  line-height:50px;
+}
+
+
+#fs-caption span {
+  padding: 5px 15px;
+}

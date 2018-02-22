@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link href="http://fonts.googleapis.com/earlyaccess/cwtexhei.css" rel="stylesheet" type="text/css" />
+<title>工藝與建築之美</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/fullscreenstyle.css" rel="stylesheet" type="text/css" />
+<link href="css/pagestyle.css" rel="stylesheet" type="text/css" />
+
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/jquery.fullscreenslides.js"></script>
+<script id="sample">
+$(function(){
+  // initialize the slideshow
+  $('.image img').fullscreenslides();
+  
+  // All events are bound to this container element
+  var $container = $('#fullscreenSlideshowContainer');
+  
+  $container
+    //This is triggered once:
+    .bind("init", function() { 
+
+      // The slideshow does not provide its own UI, so add your own
+      // check the fullscreenstyle.css for corresponding styles
+      $container
+        .append('<div class="ui" id="fs-close"></div>')
+        .append('<div class="ui" id="fs-loader">Loading...</div>')
+        .append('<div class="ui" id="fs-prev"></div>')
+        .append('<div class="ui" id="fs-next"></div>')
+        .append('<div class="ui" id="fs-caption"><span></span></div>');
+      
+      // Bind to the ui elements and trigger slideshow events
+      $('#fs-prev').click(function(){
+        // You can trigger the transition to the previous slide
+        $container.trigger("prevSlide");
+      });
+      $('#fs-next').click(function(){
+        // You can trigger the transition to the next slide
+        $container.trigger("nextSlide");
+      });
+      $('#fs-close').click(function(){
+        // You can close the slide show like this:
+        $container.trigger("close");
+      });
+      
+    })
+    // When a slide starts to load this is called
+    .bind("startLoading", function() { 
+      // show spinner
+      $('#fs-loader').show();
+    })
+    // When a slide stops to load this is called:
+    .bind("stopLoading", function() { 
+      // hide spinner
+      $('#fs-loader').hide();
+    })
+    // When a slide is shown this is called.
+    // The "loading" events are triggered only once per slide.
+    // The "start" and "end" events are called every time.
+    // Notice the "slide" argument:
+    .bind("startOfSlide", function(event, slide) { 
+      // set and show caption
+      $('#fs-caption span').text(slide.title);
+      $('#fs-caption').show();
+    })
+    // before a slide is hidden this is called:
+    .bind("endOfSlide", function(event, slide) { 
+      $('#fs-caption').hide();
+    });
+});
+</script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script language=JavaScript>
+<!--
+
+//Disable right click script III- By Renigade (renigade@mediaone.net)
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="";
+///////////////////////////////////
+function clickIE() {if (document.all) {(message);return false;}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(message);return false;}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+
+<SCRIPT language=JavaScript>
+<!-- begin
+document.onmousedown=click;
+document.onkeydown=click;
+if (document.layers) window.captureEvents(Event.MOUSEDOWN); window.onmousedown=click;
+if (document.layers) window.captureEvents(Event.KEYDOWN); window.onkeydown=click;
+function click(e){
+if (navigator.appName == 'Netscape'){
+if (e.which != 1){
+return false;}}
+if (navigator.appName == "Microsoft Internet Explorer"){
+if (event.button != 1){
+return false;}}}
+// end -->
+</SCRIPT>
+</head>
+
+<body ONDRAGSTART="window.event.returnValue=false" onSelectStart="event.returnValue=false" ONCONTEXTMENU="window.event.returnValue=false" onload="MM_preloadImages('images/googlemapon.jpg','images/navimg01_on.png','images/navimg02_on.png','images/navimg03_on.png','images/navimg04_on.png','images/navimg05_on.png','images/navimg06_on.png','images/navimg07_on.png')">
+<div id="wrap">
+  <header style="border-top-width: 5px;
+	border-top-style: solid;
+	border-top-color: #a21205;">
+    <a href="index.html" style="width:100%;"><div class="logo"><img src="images/logo.png" width="418" height="130" /></div></a>
+    <div class="banner"><img src="images/03.jpg" width="1920" height="515" /></div>
+      <nav style="background-image:url(images/nav.jpg)">
+      <ul>
+        <li><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg01','','images/navimg01_on.png',1)"><img src="images/navimg01.png" width="141" height="122" id="navimg01" /></a></li>
+        <li><a href="about.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg02','','images/navimg02_on.png',1)"><img src="images/navimg02.png" width="141" height="122" id="navimg02" /></a></li>
+        <li><a href="crafts_build.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg03','','images/navimg03_on.png',1)"><img src="images/navimg03.png" width="141" height="122" id="navimg03" /></a></li>
+        <li><a href="buddha.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg04','','images/navimg04_on.png',1)"><img src="images/navimg04.png" width="141" height="122" id="navimg04" /></a></li>
+        <li><a href="celebration.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg05','','images/navimg05_on.png',1)"><img src="images/navimg05.png" width="141" height="122" id="navimg05" /></a></li>
+        <li><a href="view.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg06','','images/navimg06_on.png',1)"><img src="images/navimg06.png" width="141" height="122" id="navimg06" /></a></li>
+        <li style="margin-left:1px;"><a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg07','','images/navimg07_on.png',1)"><img src="images/navimg07.png" width="139" height="122" id="navimg07" /></a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    <div class="maincontent">
+      <div class="leftcontent">
+        <div class="leftmenu">
+          <p><img src="images/menuimg.png" width="254" height="77" /></p>
+          <ul>
+            <a href="crafts_build.html"><li>大木結構</li></a>
+            <a href="crafts_build01.html"><li>泥陶塑造</li></a>
+            <a href="crafts_build02.html"><li>石作石雕</li></a>
+            <a href="crafts_build03.html"><li style="height:40px;line-height: 20px; padding-top: 20px;padding-bottom: 18px;">精雕木作<br />
+            <span style="font-size:13px;">(大木/細木)</span></li></a>
+            <a href="crafts_build06.html" class="triangle"><li class="menu_click">黃龜理細木圖文介紹</li></a>
+            <a href="crafts_build04.html"><li style="height:40px;line-height: 20px; padding-top: 20px;padding-bottom: 18px;">繁華彩繪<br />
+            <span style="font-size:13px;">(四大壁畫/六大門神/全廟彩繪)</span></li></a>
+            <a href="crafts_build05.html"><li>匾額楹聯</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="rightcontent"> 
+        <!--這裡是頂泰山巖介紹-->
+        <div id="creatcontent01" class="maincontenter" style="height: auto;">
+          <div class="centercontent"><img src="images/menubg.png" width="279" height="100%"/></div>
+          <div style="width:674px; float:left; margin-left:47px;">
+            <p>大木結構</p>
+            <span><div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-01.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">本嚴黃龜理大師木作介紹</h1>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">黃龜理1903年生,家住板橋,投入陳應彬門下, 勤學鑿花技藝。曾任教於國立藝術專科學校雕塑 科10年。由於技術精湛、戮力傳藝,迭獲殊榮, 1985年榮獲教育部第1屆「民族藝術薪傳獎」; 1989年榮獲教育部第1屆「國家重要民族藝術藝 師」。1995年,黃龜理病逝,2001年,縣政府在 臺北縣藝文中心成立「黃龜理紀念館」(如圖), 將其作品永久典藏。(本介紹專題全由張仁甫攝影, 撰稿 )</span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-02.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本嚴前(三川)殿前步口左壽樑</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">題材:渭水聘賢(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">黃河的第一大支流渭水發源於甘肅,在陝西潼關 古城注入黃河。商朝末年,紂王暴虐無道,姜子牙 辭官隱居,相傳在陝西境內、渭水附近的幡溪谷溪邊,以奇妙的方式约焦。西伯侯姬昌(周文王)求 賢若渴,聽聞姜子牙胸懷韜略,遂親往渭水,聘請 83歲的姜子牙為大司馬,尊為太公,修文練武、 勵精圖治。約西元前1046年,姜子牙輔佐周武王 領兵伐紂,大敗商軍於牧野,一匡天下。</span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-03.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本嚴前殿前步口右壽樑</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">題材:單刀赴會(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">孫權扣押孔明兄長諸葛謹老小,迫劉備歸還荊州,劉備表示願先還長沙、零陵、桂陽三郡。但荊州守將關羽不肯交割,魯肅請關羽赴陸口會宴商 量,關羽僅帶少數親信赴會,宴中一言不合,雲長右手奪取周倉所執大刀,左手挽住魯肅右手,同回江邊關平船中,始釋放魯肅,岸邊東吳將領呂蒙、甘寧束手無策。後曹操取漢中,劉備見曹操大軍壓境,便同意交割判州三郡,惟請孫權齊攻合肥。
+                </span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-04.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本嚴前殿前步口左員光(通隨)</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">題材:齣頭不明(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">左圖中央騎馬武將手持雙鎚。《封神榜演義》中, 黃飛虎長子黃天化手持雙鎚,但黃天化的座騎是玉麒麟,不是馬匹。在《三國演義》中,武安國使用雙鎚,在虎牢關被呂布砍斷手腕,但圖中看不到呂 布。《說唐》中,隋唐第一好漢李元霸與第三好漢裴元慶都使用雙鎚。《精忠岳傳》中,岳飛之子岳雲也手持雙鎚。圖中手持雙鎚之武將背向讀者,如此安排似乎不是主角,題材尚待深入探究。
+                </span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-05.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本嚴前殿前步口右員光(通隨)</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">題材:劉備躍馬過檀溪(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">劉備投奔荊州牧劉表後,劉表安排他駐紮新野。 名士伊藉曾對劉備談及其坐騎的盧馬會對主人不利,但劉備一笑置之。劉表繼室蔡夫人與其弟蔡瑁認為劉備將併吞荊州,遂設計劉備前來襄陽出席宴會,宴中幸得伊藉示警,劉備倉皇逃走,縱馬逕奔西門,門外碰上波濤淘湧的檀溪。劉備加鞭大呼:「的盧!的盧!今日妨吾!」言畢,的盧馬若有神助,忽然一躍三丈,飛上對岸,化險為夷。</span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-06.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本嚴前殿後步口右員光(通隨)</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">題材:岳母刺字(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">西元1126年,金人攻陷北宋首都汴京(河南開封),擄走宋欽宗和太上皇宋徽宗等,岳飛(1103~1142)決心從軍報國。相傳臨行前,母親姚氏取一銀針,在岳飛背上刺下「盡忠報國」四字,激勵岳飛奮勇殺敵、精忠報國的決心和勇氣,成為名留青史的民族英雄。雖然岳母是否識字?是否知曉刺字的手藝?有待考證,但岳母刺字的故事卻流傳千古。</span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-07.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本嚴前殿後步口左員光(通隨)</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">題材:徐母打曹(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">劉備得到徐庶的輔佐,連敗曹仁兵馬,佔領樊城。曹操謀士程昱知道徐庶侍母至孝,遂獻計騙請徐母到許昌。曹操供以文房四寶,要她修書招徐庶前來許昌,棄劉歸曹,徐母不從,大罵曹賊奸倭不臣,拿起硯台,擲向曹操。曹操欲殺徐母,程昱勸止,用計假冒徐母字跡,寫信將徐庶騙回。徐母見兒子被騙,責罵兒子不賢,辱及祖先,自盡而亡。
+                </span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-08.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本嚴正殿前之拜殿左員光(通隨)</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">題材:暴紂十罪(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">周武王伐紂軍隊攻入朝歌城內,紂王上逍遙馬、 手提金背刀,出九間殿會周軍,魯仁傑與雷鵬、雷鵾擔任左右翼。姜子牙在四不像上,向紂王痛陳其十大罪狀,紂王氣得目瞪口呆,八百諸侯湧上來誅君,東伯侯姜文煥、南伯侯鄂順、北伯侯崇應鸞等力戰紂王,紂王逃回午門,一番爭鬥後,紂王縱火燒宮,由摘星樓躍下墜樓而亡,結束殷商王朝。
+                </span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-09.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本嚴正殿前之拜殿右員光(通隨)</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">題材:華容道釋曹(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">赤壁大戰後,諸葛亮算得曹操必向西北敗走華容,於是安排三處伏兵。曹操退到烏林時,笑稱周瑜、諸葛亮無謀,不料立見趙雲領兵來襲。退到葫蘆口時,曹操又笑周瑜、諸葛亮弱智,未料張飛雄兵出現,曹軍喪膽。曹操逃到華容道口,狂笑周瑜、諸葛亮無能,埋伏的關羽突截去路,曹操動以恩義關羽心軟,放走曹操,讓他經彝陵安返襄陽。</span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-10.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本嚴正殿前之拜殿左右步通獸座</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">說明:(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">依據教育部1996年所出版《木雕-黃龜理藝師作品圖鑒》上冊之記載,本嚴正殿前之拜殿左右步通上的「獅座象座配人物」,均為黃龜理的作品, 左獅右象,精緻華麗。獸座上所置人物,兩手各持不同武器,架勢非凡。西遊記提及青獅是青毛獅子,是山西五台山文殊菩薩的坐騎;白象是六牙白象,是峨眉山普賢菩薩的坐騎。</span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-11.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本嚴正殿中央神龕(正龕)</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">說明:(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">知名大廟例如瑞芳勸濟堂、淡水清水巖、北投關渡宮、三峽長福巖等,保有黃龜理的神龕作品,尤其神龕的木雕龍柱精湛珍貴。本嚴正龕乃黃龜理瀝血傑作,1935年要價1600圓,約為正殿石龍柱 440圓的四倍。今新進國中教師月薪約44000元, 1935年時,新進教師約16圓。準此,本嚴正龕時 價約為新台幣440萬元,其實是無價珍寶。
+                </span>
+                </span>
+              </div>
+            </div>
+            <div class="imgcontent" style="margin-bottom:29px;">
+              <div class="leftimg">
+              <div class="image">
+              <img src="images/img03/imgcontent03-10-12.jpg" width="290" height="218">
+              </div>
+              </div>
+              <div class="rightcontenter">
+                <span style="margin:0px;">
+                <h1 style="color:#c61316;">位置:本巖神像</h1>
+                <span style="color:#1c2a83; margin:0px; line-height: 22px;">說明:(1933年完成)</span>
+                <span style="margin:0px; text-indent: 2em; line-height: 22px;">依據黄龜理紀念館内<黄龜理年表>之記載,1933年,黃龜理雕刻本嚴神像10餘尊。至於是哪幾尊?因代遠年煙,人事已非,較難查考。左圖為本嚴正殿右旁祀神媽祖娘娘,其配祀神千里眼、順風耳均頭戴官帽,身穿官服。千里眼左手持雙錢蕉葉,用以招(蕉之台語)來福壽;順風耳右手持金元寶,象徵財祿廣進。如此裝扮,全台僅見。
+                </span>
+                </span>
+              </div>
+            </div>
+            </span>
+          </div>
+        </div>
+        <!--這裡是頂泰山巖介紹結束-->
+      </div>
+    </div>
+  </div>
+<footer>
+<div class="fc">
+<div class="column">
+<div class="flogo"><img src="images/footer.png" width="331" height="164" /></div>
+<div class="finfo">
+<p>地址  │   新北市泰山區應化街32號</p>
+<p>電話  │   (02)29018371</p>
+<p>傳真  │   (02)29042420</p>
+<p>信箱  │    <a href="mailto:up.temple@msa.hinet.net">up.temple@msa.hinet.net</a></p>
+</div>
+</div>
+<div class="column" style="line-height:25px; margin-top:45px;">
+<div class="cl" style="font-size:15px; line-height:25px;">
+  <h3>關於頂泰山巖 </h3>
+  <p><a href="about.html">頂泰山巖簡介</a></p>
+        <p><a href="about01.html">金面顯應祖師</a></p>
+        <p><a href="about02.html">大事年表</a></p>
+        <p><a href="about03.html">歷次整建</a></p>
+        <p><a href="about04.html">董監事會</a></p>
+        <p style="font-family: "cwTeXHei";"><a href="about05.html">分靈廟</a></p>
+</div>
+<div class="cc" style="font-size:15px; line-height:25px;">
+  <h3>工藝與建築之美 </h3>
+        <p><a href="crafts_build.html">大木結構</a></p>
+        <p><a href="crafts_build01.html">泥陶塑造</a></p>
+        <p><a href="crafts_build02.html">石作石雕</a></p>
+        <p><a href="crafts_build03.html">精雕木作</a></p>
+        <p><a href="crafts_build04.html">繁華彩繪</a></p>
+        <p><a href="crafts_build05.html">匾額楹聯</a></p>
+</div>
+<div class="cr" style="font-size:15px; line-height:25px;">
+  <h3>奉祀神佛 </h3>
+  <p><a href="buddha.html">參拜路線圖</a></p>
+</div>
+</div>
+</div>
+<div class="copyright">財團法人新北市泰山巖版權所有‧轉載必究　2015 Copyright © UpTemple. All Right Reserved.　資料提供：本巖顧問、新北市泰山區文史協會創會理事長 張仁甫.　網頁設計by<a href="http://www.chrisliou.com" target="_blank">克里斯劉設計工作室</a></div>
+</footer>
+</div>
+
+</body>
+</html>

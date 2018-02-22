@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="http://fonts.googleapis.com/earlyaccess/cwtexhei.css" rel="stylesheet" type="text/css" />
+    <title>慶典法會</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+    function MM_swapImgRestore() { //v3.0
+        var i, x, a = document.MM_sr;
+        for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+
+    function MM_preloadImages() { //v3.0
+        var d = document;
+        if (d.images) {
+            if (!d.MM_p) d.MM_p = new Array();
+            var i, j = d.MM_p.length,
+                a = MM_preloadImages.arguments;
+            for (i = 0; i < a.length; i++)
+                if (a[i].indexOf("#") != 0) {
+                    d.MM_p[j] = new Image;
+                    d.MM_p[j++].src = a[i];
+                }
+        }
+    }
+
+    function MM_findObj(n, d) { //v4.01
+        var p, i, x;
+        if (!d) d = document;
+        if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+            d = parent.frames[n.substring(p + 1)].document;
+            n = n.substring(0, p);
+        }
+        if (!(x = d[n]) && d.all) x = d.all[n];
+        for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+        for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+        if (!x && d.getElementById) x = d.getElementById(n);
+        return x;
+    }
+
+    function MM_swapImage() { //v3.0
+        var i, j = 0,
+            x, a = MM_swapImage.arguments;
+        document.MM_sr = new Array;
+        for (i = 0; i < (a.length - 2); i += 3)
+            if ((x = MM_findObj(a[i])) != null) {
+                document.MM_sr[j++] = x;
+                if (!x.oSrc) x.oSrc = x.src;
+                x.src = a[i + 2];
+            }
+    }
+    </script>
+    <script language=JavaScript>
+    <!--
+
+    //Disable right click script III- By Renigade (renigade@mediaone.net)
+    //For full source code, visit http://www.dynamicdrive.com
+
+    var message = "";
+    ///////////////////////////////////
+    function clickIE() {
+        if (document.all) {
+            (message);
+            return false;
+        }
+    }
+
+    function clickNS(e) {
+        if (document.layers || (document.getElementById && !document.all)) {
+            if (e.which == 2 || e.which == 3) {
+                (message);
+                return false;
+            }
+        }
+    }
+    if (document.layers) {
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown = clickNS;
+    } else {
+        document.onmouseup = clickNS;
+        document.oncontextmenu = clickIE;
+    }
+
+    document.oncontextmenu = new Function("return false")
+        // -->
+    </script>
+    <SCRIPT language=JavaScript>
+    <!-- begin
+    document.onmousedown = click;
+    document.onkeydown = click;
+    if (document.layers) window.captureEvents(Event.MOUSEDOWN);
+    window.onmousedown = click;
+    if (document.layers) window.captureEvents(Event.KEYDOWN);
+    window.onkeydown = click;
+
+    function click(e) {
+        if (navigator.appName == 'Netscape') {
+            if (e.which != 1) {
+                return false;
+            }
+        }
+        if (navigator.appName == "Microsoft Internet Explorer") {
+            if (event.button != 1) {
+                return false;
+            }
+        }
+    }
+    // end -->
+    </SCRIPT>
+</head>
+
+<body ONDRAGSTART="window.event.returnValue=false" onSelectStart="event.returnValue=false" ONCONTEXTMENU="window.event.returnValue=false" onload="MM_preloadImages('images/googlemapon.jpg','images/navimg01_on.png','images/navimg02_on.png','images/navimg03_on.png','images/navimg04_on.png','images/navimg05_on.png','images/navimg06_on.png','images/navimg07_on.png')">
+    <div id="wrap">
+        <div id="wrap">
+            <header>
+                <a href="index.html" style="width:100%;">
+                    <div class="logo"><img src="images/logo.png" width="418" height="130" /></div>
+                </a>
+                <div class="banner"><img src="images/05.jpg" width="1920" height="515" /></div>
+                <nav style="background-image:url(images/nav.jpg)">
+                    <ul>
+                        <li>
+                            <a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg01','','images/navimg01_on.png',1)"><img src="images/navimg01.png" width="141" height="122" id="navimg01" /></a>
+                        </li>
+                        <li>
+                            <a href="about.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg02','','images/navimg02_on.png',1)"><img src="images/navimg02.png" width="141" height="122" id="navimg02" /></a>
+                        </li>
+                        <li>
+                            <a href="crafts_build.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg03','','images/navimg03_on.png',1)"><img src="images/navimg03.png" width="141" height="122" id="navimg03" /></a>
+                        </li>
+                        <li>
+                            <a href="buddha.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg04','','images/navimg04_on.png',1)"><img src="images/navimg04.png" width="141" height="122" id="navimg04" /></a>
+                        </li>
+                        <li>
+                            <a href="celebration.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg05','','images/navimg05_on.png',1)"><img src="images/navimg05.png" width="141" height="122" id="navimg05" /></a>
+                        </li>
+                        <li>
+                            <a href="view.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg06','','images/navimg06_on.png',1)"><img src="images/navimg06.png" width="141" height="122" id="navimg06" /></a>
+                        </li>
+                        <li style="margin-left:1px;">
+                            <a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg07','','images/navimg07_on.png',1)"><img src="images/navimg07.png" width="139" height="122" id="navimg07" /></a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="content">
+                <div class="maincontent">
+                    <div class="leftcontent">
+                        <div class="leftmenu">
+                            <p><img src="images/celebrationimg.jpg" width="254" height="77" /></p>
+                            <ul>
+                                <a href="celebration.html">
+                                    <li>慶典法會</li>
+                                </a>
+                                <a href="celebration01.html" class="triangle">
+                                    <li class="menu_click">活動訊息</li>
+                                </a>
+                                <a href="celebration02.html">
+                                    <li>最新消息</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rightcontent">
+                        <!--這裡是大事年表-->
+                        <div id="introcontent01" class="maincontenter" style="height:auto;">
+                            <div class="centercontent"><img src="images/menubg.png" width="279" height="100%" /></div>
+                            <div style="width:674px; float:left; margin-left:47px; margin-bottom: 82px;">
+                                <p>活動訊息</p>
+                                <div class="imgcontent" style="margin-top:20px;">
+
+                                <pre style="line-height:26px;">￭ 本巖鎮殿祖於106年12月28日起重新粉面，107年1月1日圓滿安座</pre>
+                                <pre style="line-height:26px;float:left;">￭ 粉面前鎮殿祖法像</pre>
+                                <pre style="line-height:26px;float:left;margin-left:185px;">￭ 粉面後鎮殿祖金面法像</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-211.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-212.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年12月31日第二屆顯應祖師聯誼會由深坑天龍宮(巖)主辦，各主祀顯應祖師友(宮)巖主委、
+   幹部踴躍出席，歡喜相聚，共同籌劃發揚金面顯應祖師濟世精神</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-207.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-208.jpg" width="290" height="218" /></div>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-209.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-210.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年12月25日董監事率花鼓陣奉祖師三度參加在佛陀紀念館舉行的2017世界神明聯誼會。祖
+   師駐駕大佛平台，俯瞰各式陣頭表演；花鼓陣受邀菩提廣場盛大演出<a href="images/video.mp4" style="color: red;" target="_blank">(實況影音分享)</a>，並獲頒「
+   忠義傳家」金牌殊榮</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-201.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-202.jpg" width="290" height="218" /></div>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-203.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-204.jpg" width="290" height="218" /></div>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-205.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-206.jpg" width="auto" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年12月24日祖師駐駕虎尾持法媽祖宮</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-199.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-200.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年12月24日祖師三度駐駕永定后儀宮，花鼓陣再次舞動小鎮</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-197.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-198.jpg" width="290" height="218" /></div>
+                                
+                                <pre style="line-height:26px;">￭ 106年12月24日董監事、花鼓陣奉祖師三度駐駕內門順賢宮</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-193.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-194.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-195.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-196.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年11月6日新北市朱立倫市長蒞臨上香祝壽祈福</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-191.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-192.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 花獅、花鼓陣拜廟，禮敬祖師恭祝聖誕千秋</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-189.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-190.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;float:left;">￭ 感謝里長們熱誠參與、協助遶境</pre>
+                                <pre style="line-height:26px;float:left;margin-left:100px;">￭ 爐主、頭家歡喜遶境換香</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-187.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-188.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;float:left;">￭ 董事長擲筊107年爐主、頭家</pre>
+                                <pre style="line-height:26px;float:left;margin-left:117px;">￭ 恭喜李國瑞大德立筊拔籌107年爐主</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-185.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-186.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 禮斗壇場莊嚴殊勝，誦經功德普皆回向</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-183.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-184.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年9月2~4日 (農曆7月12~14日)106年中元消災植福薦拔盂蘭盆法會</pre>
+
+                                <pre style="line-height:26px;">￭ 法師引領大眾全巖內外灑淨，召請被超薦之生靈來到壇場聽經聞法</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-181.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-182.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 大眾至誠恭誦地藏經，祈福消災及超薦祖先、亡靈、嬰靈、冤親債主、地基主等生靈</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-179.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-180.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 施放大蒙山普施六道群靈</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-177.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-178.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 大甘露施食，信眾踴躍贊普，普施六道，物資轉贈公益團體，冥陽兩利</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-175.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-176.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年5月20日 106年第14屆第1次信徒代表大會</pre>
+                                <pre style="line-height:26px;float:left;">￭ 信徒代表齊聚大合照</pre>
+                                <pre style="line-height:26px;float:left;margin-left:170px;">￭ 張仁甫顧問精彩專題報告--頂泰山巖的特色
+   介紹</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-171.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-172.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-173.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-174.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年5月18日 同榮附幼師生、家長60餘人，由泰山文史協會老師分二組導覽，瞭解古蹟、信仰
+   從小紮根</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-167.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-168.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-169.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-170.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年5月17日 義學國中楊校長帶領畢業班同學蒞巖參拜文昌帝君，祈求考運亨通、金榜題名</pre>
+
+                                <pre style="line-height:26px;">￭ 供品-蘋果、乖乖(平順)、蔥蒜(聰明、精算)、筍(順利、高昇)、包子、粽子(包中)</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-165.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-166.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年5月14日 歡迎大坪林泰山巖劉主委帶領信眾250餘人蒞巖參香</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-161.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-162.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-163.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-164.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年5月3日 (農曆4月8日)浴佛節(佛誕節) 香湯浴佛，淨佛身、離垢染、增福慧</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-159.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-160.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年3月31日 歡迎市定古蹟-淡水福佑宮主委、幹部蒞巖交流分享古蹟修復經驗</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-155.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-156.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-157.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-158.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年3月14日 台南市長賴清德蒞巖參拜感恩顯應祖師恩澤~本巖於105年2月捐助台南地震善款
+   100萬元</pre>
+
+                                <pre style="line-height:26px;float:left;">￭ 賴清德市長以三獻禮叩謝顯應謝祖師恩澤</pre>
+                                <pre style="line-height:26px;float:left;margin-left:41px;">￭ 賴市長致謝詞~感念本巖愛心賑災</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-151.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-152.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;float:left;">￭ 賴市長巖前與本巖董監事合影</pre>
+                                <pre style="line-height:26px;float:left;margin-left:113px;">￭ 賴市長與董事長林志峰合影</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-153.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-154.jpg" width="290" height="218" /></div>
+
+
+                                <pre style="line-height:26px;">￭ 106年2月25日歡迎南港六合祖40餘人蒞巖參香</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-149.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-150.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年2月18日汐止福山巖160餘人蒞巖參香，花鼓陣熱烈迎賓，友巖交流，人神同喜相見歡 </pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-145.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-146.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-147.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-148.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年2月12日五股龍鳳巖200餘人蒞巖參香，祖師座前誦讀參香疏文，本巖佳餚迎賓</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-141.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-142.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-143.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-144.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年新春祈安禮斗壇場莊嚴，師父點亮福壽斗米七星燈</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-139.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-140.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年新春祭解-師父為信眾祈福消災，並於所備衣服加蓋顯應祖師賜福平安圖記</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-137.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-138.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 106年新春點光明燈、安太歲、禮斗及享用平安麵盛況</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-133.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-134.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-135.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-136.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 除夕子時開巖門拜頭香，區長擲筊祈求國運籤，並與常務董事合影</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-129.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-130.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-131.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-132.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年12月29日覺道師父引領誦經團禮拜藥師寶懺</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-125.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-126.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-127.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-128.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年12月24日本巖正式授旗花鼓藝陣，並奉顯應祖師聖駕出發參加世界神明聯誼會。</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-123.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-124.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年12月24日顯應祖師參加世界神明聯誼會，沿途參訪西螺福興宮、永定后儀宮，並駐駕高
+   雄內門順賢宮</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-119.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-120.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-121.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-122.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年12月25日本巖顯應祖師在花鼓藝陣前導下，駐駕佛光山佛陀紀念館大佛平台參加世界神
+   明聯誼會，本巖花鼓藝陣並受邀精采演出</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-115.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-116.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-117.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-118.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年祭山靈法會並舉行揮毫贈春聯與大眾結緣</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-113.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-114.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年12月21日本巖林志峰董事長召集第一次顯應祖師聯誼會，與在台主祀顯應祖師各友巖交流聯誼</pre>
+
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-112.jpg" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年11月26日參訪六友巖</pre>
+
+                                <pre style="line-height:26px;float:left;">￭ 與友巖-汐止福山巖幹部合影</pre>
+                                <pre style="line-height:26px;float:left;margin-left:120px;">￭ 與友巖-深坑天龍宮幹部合影</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-100.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-101.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;float:left;">￭ 奉祖師至友巖-大坪林泰山巖過火參香</pre>
+                                <pre style="line-height:26px;float:left;margin-left:65px;">￭ 與友巖-龜山顯安巖幹部合影</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-102.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-103.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 祖師在友巖-頂福巖過爐參香，友巖幹部、信眾叩首頂禮</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-104.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-105.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 至友巖-五股龍鳳巖參香留影</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-106.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-107.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 友巖參香一日行，董監事、信眾歡喜奉駕啟程，一路參訪七個友巖，圓滿回駕</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-108.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-109.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-110.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-111.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年11月5日參加明志書院先賢郭宗嘏入祀安座典禮，本巖贊助特刊出刊費以示慶賀</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-90.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-91.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-92.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-93.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年10月18日祖師聖誕祈安遶境</pre>
+                                <pre style="line-height:26px;">￭ 農曆9月18日 祖師祖聖誕~泰山劉淑芬區長及本巖林志峰董事長喜迎祥獅獻瑞</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-86.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-87.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-88.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-89.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 沿途信眾虔誠擺香案迎老祖、換香祈平安</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-84.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-85.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 左起李弘基常董、王祈函副董、盧淵源常董及遶境總指揮戴聯樹里長全程隨駕、盧淵源常董
+奉老祖回巖</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-82.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-83.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年10月15日董事長與常董奉老祖出席新北市泰山獅王文化節</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-80.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-81.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年10月2日李氏七股會恭賀祖師聖誕~自今年起訂於每年農曆九月第一個星期日舉行</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-78.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-79.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年9月18日全國古蹟日新北市泰山文史協會老師來巖為貴賓座精彩絕倫的導覽</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-74.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-75.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-76.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-77.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年8月17日新北市朱立倫市長蒞臨禮敬老祖及參訪明志生態園區</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-70.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-71.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-72.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-73.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年8月16日中元盂蘭盆勝會~慎終追遠超薦祖先、普施法界一切有情</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-66.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-67.jpg" width="290" height="218" /></div>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-68.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-69.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105 年 3 月 20~25 日參訪福建安溪祖巖進香謁祖</pre>
+
+                                <pre style="line-height:26px;float:left;">￭ 祖巖巖貌</pre>
+                                <pre style="line-height:26px;float:left;margin-left:240px;">￭ 祖巖大殿</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-94.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-95.jpg" width="290" height="218" /></div>
+                                <pre style="line-height:26px;float:left;">￭ 祖巖大殿神龕供奉祖師法像</pre>
+                                <pre style="line-height:26px;float:left;margin-left:126px;">￭ 從山頂俯瞰祖巖巖門牌樓</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-96.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-97.jpg" width="290" height="218" /></div>
+                                <pre style="line-height:26px;float:left;">￭ 林董事長率眾禮敬祖師，並恭讀謁祖疏文</pre>
+                                <pre style="line-height:26px;float:left;margin-left:40px;">￭ 一行人與祖巖人員於祖巖巖前合影留念</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-98.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-99.jpg" width="290" height="218" /></div>
+
+                                <pre style="line-height:26px;">￭ 105年新春祈安禮斗</pre>
+                                <pre style="line-height:26px;float:left;">￭ 新春祈安禮斗莊巖壇場</pre>
+                                <pre style="line-height:26px;float:left;margin-left:150px;"> ￭ 義工團隊精心備辦的齋天供品</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-62.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-63.jpg" width="290" height="218" /></div>
+                                <pre style="line-height:26px;float:left;">￭ 董事長率董監事新春禮斗祈福</pre>
+                                <pre style="line-height:26px;float:left;margin-left:110px;">￭ 董監事及值年爐主虔心參與延壽斗科科儀</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-60.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-61.jpg" width="290" height="218" /></div>
+                                 
+                                <pre style="line-height:26px;">￭ 義工菩薩充滿法喜的笑容</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-56.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-57.jpg" width="290" height="218" /></div> 
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-58.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-59.jpg" width="290" height="218" /></div>
+                                
+                                <pre style="line-height:26px;">￭ 105年春節賀歲 平安麵與眾結緣</pre> 
+                              <pre style="line-height:26px;">￭ 來巖信眾開心熱鬧享用平安麵</pre>
+                              <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-54.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-55.jpg" width="290" height="218" /></div> 
+                              <pre style="line-height:26px;float:left;">￭ 新春賀歲-金猴報喜 福猴迎春</pre>
+                                 <pre style="line-height:26px;float:left;margin-left:33px;">￭ 歡歡喜喜打齋結緣</pre>
+                                 <pre style="line-height:26px;float:left;margin-left:82px;">￭ 大眾點光明燈、安太歲
+</pre>
+<div class="img" style="margin-bottom:15px;">
+<img src="images/img05/imgcontent05-51.jpg" width="183" height="290"style="margin-right:41px;"/>  <img src="images/img05/imgcontent05-52.jpg" width="163" height="290"style="margin-right:41px;"/>   <img src="images/img05/imgcontent05-53.jpg" width="162" height="290"/></div>
+                                 
+                                  <pre style="line-height:26px;float:left;">￭ 初一頭香 泰山區長蒞臨參香合影</pre>
+                                  <pre style="line-height:26px;float:left;margin-left:92px;">
+￭ 立委李鴻鈞昆仲擲筊抽出丙申年國運籤</pre>
+<div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-49.jpg" width="290" height="218"style="margin-right:22px;"/><img src="images/img05/imgcontent05-50.jpg" width="290" height="218" /></div>
+                                  <pre style="line-height:26px;">￭ 本巖顯應祖師聖示 105年歲次丙申 士、農、工、商、漁牧各業運勢</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-48.jpg" width="507" height="183"style="margin-right:22px;" /></div> 
+                                <pre style="line-height:26px;">￭ 104年慶祝重建八十周年暨祭山靈及謝平安法會-105年1月2日(農曆11月23日)</pre> 
+                                <pre style="line-height:26px;">￭ 依循古禮隆重致祭於山川靈神及齋天，祈願 護國佑民 斯土永享昇平</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-46.jpg" width="290" height="218"style="margin-right:22px;" /><img src="images/img05/imgcontent05-47.jpg" width="290" height="218" /></div> 
+                                <pre style="line-height:26px;">￭ 慶祝重建八十周年略記~永感李、連、邱、鄭、周等諸氏先賢功勳者，昔年慷慨捐輸之德</pre> 
+                                 <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-45.jpg" width="340" height="183"style="margin-right:22px;" /></div>
+                                <pre style="line-height:26px;">￭ 邀請陳章甫老師等書法名家於前埕揮毫贈春聯，民眾歡喜排隊索取</pre>
+                                <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-43.jpg" width="290" height="218"style="margin-right:22px;" /><img src="images/img05/imgcontent05-44.jpg" width="290" height="218" /></div>
+                                    
+                                   
+                                    
+                                    
+                                    
+                                    <pre style="line-height:26px; float:left;">￭ 2015年農曆9月18日 祖師聖誕禮斗法會及祈
+福遶境本巖董監事虔心合掌禮老祖賀壽祈福</pre>
+                                    <pre style="line-height:26px; float:left; margin-left:20px;">￭ 新北市高宗正副市長蒞巖恭祝祖師聖誕千秋</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-26.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-27.jpg" width="290" height="218" /></div>
+                                    <pre style="line-height:26px;">￭ 祖師聖誕禮斗祈福</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-28.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-29.jpg" width="290" height="218" /></div>
+                                    <pre style="line-height:26px; float:left;">￭ 陣頭熱鬧遶境</pre>
+                                    <pre style="line-height:26px; float:left; margin-left:213px;">￭ 本巖值年爐主歡喜遶境祈福</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-30.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-31.jpg" width="290" height="218" /></div>
+                                    <pre style="line-height:26px;">￭ 明志社區花鼓陣熱情參與祝壽祈福遶境</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-32.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-33.jpg" width="290" height="218" /></div>
+                                    <pre style="line-height:26px;">￭ 104年10月24日新北市泰山獅王節恭請顯應祖師駐駕會場觀禮</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-24.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-25.jpg" width="290" height="218" /></div>
+                                     <pre style="line-height:26px;">￭ 2015 七股會-李氏宗親齊聚一堂 恭祝顯應祖師104年聖誕千秋</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-22.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-23.jpg" width="290" height="218" /></div>
+                                    <pre style="line-height:26px;">￭ 2015中元盂蘭盆勝會 普施迴向</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-20.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-21.jpg" width="290" height="218" /></div>
+                                    <pre style="line-height:26px;">￭ 104.5.23隆重舉行彩繪竣工典禮及104年度信徒代表大會。由30位天女以十供養儀式獻供</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-01.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-02.jpg" width="290" height="218" /></div>
+                                    
+                                    <pre style="line-height:26px;">￭李董事長等董監事及彩繪大師劉家正代表獻供</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-03.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-04.jpg" width="290" height="218" /></div>
+                                    <pre style="line-height:26px;">￭泰山區黃區長秀川及貴賓偕同揭綵</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-05.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-15.jpg" width="290" height="218" /></div>
+                                    <pre style="line-height:26px;">￭義學國中祥獅獻瑞、同榮國小吉(擊)鼓報喜為彩繪竣工典禮揭開序幕，增添熱鬧</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-06.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-07.jpg" width="290" height="218" /></div>
+                                    <pre style="line-height:26px;">￭104.5.23汐止雲山巖以熱鬧陣頭來巖參香，同時為本巖彩繪竣工典禮添色增輝</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-08.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-09.jpg" width="290" height="218" /></div>
+                                    <pre style="line-height:26px;">￭104.5.22慶祝全巖彩繪竣工，禮請上惟下悟法師引領全巖灑淨，舉行齋天法會</pre>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-10.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-11.jpg" width="290" height="218" /></div>
+                                    <div class="img" style="margin-bottom:15px;"><img src="images/img05/imgcontent05-12.jpg" width="290" height="218" style="margin-right:22px;" /><img src="images/img05/imgcontent05-13.jpg" width="290" height="218" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--這裡是大事年表結束-->
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="fc">
+                    <div class="column">
+                        <div class="flogo"><img src="images/footer.png" width="331" height="164" /></div>
+                        <div class="finfo">
+                            <p>地址 │ 新北市泰山區應化街32號</p>
+                            <p>電話 │ (02)29018371</p>
+                            <p>傳真 │ (02)29042420</p>
+                            <p>信箱 │ <a href="mailto:up.temple@msa.hinet.net">up.temple@msa.hinet.net</a></p>
+                        </div>
+                    </div>
+                    <div class="column" style="line-height:25px; margin-top:45px;">
+                        <div class="cl" style="font-size:15px; line-height:25px;">
+                            <h3>關於頂泰山巖 </h3>
+                            <p><a href="about.html">頂泰山巖簡介</a></p>
+                            <p><a href="about01.html">金面顯應祖師</a></p>
+                            <p><a href="about02.html">大事年表</a></p>
+                            <p><a href="about03.html">歷次整建</a></p>
+                            <p><a href="about04.html">董監事會</a></p>
+                            <p style="font-family: " cwTeXHei ";"><a href="about05.html">分靈廟</a></p>
+                        </div>
+                        <div class="cc" style="font-size:15px; line-height:25px;">
+                            <h3>工藝與建築之美 </h3>
+                            <p><a href="crafts_build.html">大木結構</a></p>
+                            <p><a href="crafts_build01.html">泥陶塑造</a></p>
+                            <p><a href="crafts_build02.html">石作石雕</a></p>
+                            <p><a href="crafts_build03.html">精雕木作</a></p>
+                            <p><a href="crafts_build04.html">繁華彩繪</a></p>
+                            <p><a href="crafts_build05.html">匾額楹聯</a></p>
+                        </div>
+                        <div class="cr" style="font-size:15px; line-height:25px;">
+                            <h3>奉祀神佛 </h3>
+                            <p><a href="buddha.html">參拜路線圖</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">財團法人新北市泰山巖版權所有‧轉載必究　2015 Copyright © UpTemple. All Right Reserved.　資料提供：本巖顧問、新北市泰山區文史協會創會理事長 張仁甫.　網頁設計by<a href="http://www.chrisliou.com" target="_blank">克里斯劉設計工作室</a></div>
+            </footer>
+        </div>
+</body>
+
+</html>

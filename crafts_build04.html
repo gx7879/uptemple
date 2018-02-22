@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link href="http://fonts.googleapis.com/earlyaccess/cwtexhei.css" rel="stylesheet" type="text/css" />
+<title>工藝與建築之美</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/fullscreenstyle.css" rel="stylesheet" type="text/css" />
+<link href="css/pagestyle.css" rel="stylesheet" type="text/css" />
+
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/jquery.fullscreenslides.js"></script>
+<script id="sample">
+$(function(){
+  // initialize the slideshow
+  $('.image img').fullscreenslides();
+  
+  // All events are bound to this container element
+  var $container = $('#fullscreenSlideshowContainer');
+  
+  $container
+    //This is triggered once:
+    .bind("init", function() { 
+
+      // The slideshow does not provide its own UI, so add your own
+      // check the fullscreenstyle.css for corresponding styles
+      $container
+        .append('<div class="ui" id="fs-close"></div>')
+        .append('<div class="ui" id="fs-loader">Loading...</div>')
+        .append('<div class="ui" id="fs-prev"></div>')
+        .append('<div class="ui" id="fs-next"></div>')
+        .append('<div class="ui" id="fs-caption"><span></span></div>');
+      
+      // Bind to the ui elements and trigger slideshow events
+      $('#fs-prev').click(function(){
+        // You can trigger the transition to the previous slide
+        $container.trigger("prevSlide");
+      });
+      $('#fs-next').click(function(){
+        // You can trigger the transition to the next slide
+        $container.trigger("nextSlide");
+      });
+      $('#fs-close').click(function(){
+        // You can close the slide show like this:
+        $container.trigger("close");
+      });
+      
+    })
+    // When a slide starts to load this is called
+    .bind("startLoading", function() { 
+      // show spinner
+      $('#fs-loader').show();
+    })
+    // When a slide stops to load this is called:
+    .bind("stopLoading", function() { 
+      // hide spinner
+      $('#fs-loader').hide();
+    })
+    // When a slide is shown this is called.
+    // The "loading" events are triggered only once per slide.
+    // The "start" and "end" events are called every time.
+    // Notice the "slide" argument:
+    .bind("startOfSlide", function(event, slide) { 
+      // set and show caption
+      $('#fs-caption span').text(slide.title);
+      $('#fs-caption').show();
+    })
+    // before a slide is hidden this is called:
+    .bind("endOfSlide", function(event, slide) { 
+      $('#fs-caption').hide();
+    });
+});
+</script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script language=JavaScript>
+<!--
+
+//Disable right click script III- By Renigade (renigade@mediaone.net)
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="";
+///////////////////////////////////
+function clickIE() {if (document.all) {(message);return false;}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(message);return false;}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+
+<SCRIPT language=JavaScript>
+<!-- begin
+document.onmousedown=click;
+document.onkeydown=click;
+if (document.layers) window.captureEvents(Event.MOUSEDOWN); window.onmousedown=click;
+if (document.layers) window.captureEvents(Event.KEYDOWN); window.onkeydown=click;
+function click(e){
+if (navigator.appName == 'Netscape'){
+if (e.which != 1){
+return false;}}
+if (navigator.appName == "Microsoft Internet Explorer"){
+if (event.button != 1){
+return false;}}}
+// end -->
+</SCRIPT>
+</head>
+
+<body ONDRAGSTART="window.event.returnValue=false" onSelectStart="event.returnValue=false" ONCONTEXTMENU="window.event.returnValue=false" onload="MM_preloadImages('images/googlemapon.jpg','images/navimg01_on.png','images/navimg02_on.png','images/navimg03_on.png','images/navimg04_on.png','images/navimg05_on.png','images/navimg06_on.png','images/navimg07_on.png')">
+<div id="wrap">
+<div id="wrap">
+  <header>
+    <a href="index.html" style="width:100%;"><div class="logo"><img src="images/logo.png" width="418" height="130" /></div></a>
+    <div class="banner"><img src="images/03.jpg" width="1920" height="515" /></div>
+      <nav style="background-image:url(images/nav.jpg)">
+      <ul>
+        <li><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg01','','images/navimg01_on.png',1)"><img src="images/navimg01.png" width="141" height="122" id="navimg01" /></a></li>
+        <li><a href="about.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg02','','images/navimg02_on.png',1)"><img src="images/navimg02.png" width="141" height="122" id="navimg02" /></a></li>
+        <li><a href="crafts_build.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg03','','images/navimg03_on.png',1)"><img src="images/navimg03.png" width="141" height="122" id="navimg03" /></a></li>
+        <li><a href="buddha.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg04','','images/navimg04_on.png',1)"><img src="images/navimg04.png" width="141" height="122" id="navimg04" /></a></li>
+        <li><a href="celebration.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg05','','images/navimg05_on.png',1)"><img src="images/navimg05.png" width="141" height="122" id="navimg05" /></a></li>
+        <li><a href="view.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg06','','images/navimg06_on.png',1)"><img src="images/navimg06.png" width="141" height="122" id="navimg06" /></a></li>
+        <li style="margin-left:1px;"><a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('navimg07','','images/navimg07_on.png',1)"><img src="images/navimg07.png" width="139" height="122" id="navimg07" /></a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    <div class="maincontent">
+      <div class="leftcontent">
+        <div class="leftmenu">
+          <p><img src="images/menuimg.png" width="254" height="77" /></p>
+          <ul>
+            <a href="crafts_build.html"><li>大木結構</li></a>
+            <a href="crafts_build01.html"><li>泥陶塑造</li></a>
+            <a href="crafts_build02.html"><li>石作石雕</li></a>
+            <a href="crafts_build03.html"><li style="height:40px;line-height: 20px; padding-top: 20px;padding-bottom: 18px;">精雕木作<br />
+            <span style="font-size:13px;">(大木/細木)</span></li></a>
+            <a href="crafts_build06.html"><li>黃龜理細木圖文介紹</li></a>
+            <a href="crafts_build04.html" class="triangle"><li class="menu_click" style="height:40px;line-height: 20px; padding-top: 20px;padding-bottom: 18px;">繁華彩繪<br />
+            <span style="font-size:13px;">(四大壁畫/六大門神/全廟彩繪)</span></li></a>
+            <a href="crafts_build05.html"><li>匾額楹聯</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="rightcontent"> 
+        <!--這裡是繁華彩繪-->
+        <div id="creatcontent05" class="maincontenter">
+          <div class="centercontent"><img src="images/menubg.png" width="279" height="100%"/></div>
+          <div style="width:674px; float:left; margin-left:47px;">
+            <p>繁華彩繪</p>
+            <span><div class="creat01" style="background-image:url(images/icon06.png)">
+              <p style="border:none; margin-bottom:20px; letter-spacing:0.1em; font-size:13px; margin-left:48px; color:#000000; line-height:38px; height:38px;">2014~2015年，彩繪名師劉家正(號玉山人)主持本巖全廟彩繪。</p></div>
+              <div class="imgbox">
+              <div class="imgcontent">
+              <div class="leftbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">1.前殿挑檐檁/台灣國寶長尾山娘</pre>
+              <div class="image">
+              <a rel="gallery" title="1.前殿挑檐檁/台灣國寶長尾山娘" href="images/img03/06-01_b.jpg"><img src="images/img03/imgcontent03-06-01.jpg" width="290" height="218" /><span>放大查看</span></a>
+              </div>
+              </div>
+              <div class="rightbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">2.左廊左通樑/漢武帝為君欲作仙</pre>
+              <div class="image">
+              <a rel="gallery" title="2.左廊左通樑/漢武帝為君欲作仙" href="images/img03/06-02_b.jpg"><img src="images/img03/imgcontent03-06-02.jpg" width="290" height="218" />
+              <span>放大查看</span></a>
+              </div>
+              </div>
+              </div>
+              <div class="imgcontent">
+              <div class="leftbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">3.拜殿屋頂雙脊檁/兩儀四象</pre>
+              <div class="image">
+              <a rel="gallery" title="3.拜殿屋頂雙脊檁/兩儀四象" href="images/img03/06-03_b.jpg"><img src="images/img03/imgcontent03-06-03.jpg" width="290" height="218" />
+              <span>放大查看</span></a>
+              </div>
+              </div>
+              <div class="rightbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">4.正殿明間左棟架/峰頂放光</pre>
+              <div class="image">
+              <a rel="gallery" title="4.正殿明間左棟架/峰頂放光" href="images/img03/06-04_b.jpg"><img src="images/img03/imgcontent03-06-04.jpg" width="290" height="218" />
+              <span>放大查看</span></a>
+              </div>
+              </div>
+              </div>
+              <div class="imgcontent">
+              <div class="leftbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">5.正殿楣樑正面/群仙聚會</pre>
+              <div class="image">
+              <a rel="gallery" title="5.正殿楣樑正面/群仙聚會" href="images/img03/06-05_b.jpg"><img src="images/img03/imgcontent03-06-05.jpg" width="290" height="218" />
+              <span>放大查看</span></a></div>
+              </div>
+              <div class="rightbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">6.正殿右大通擂金畫/祈雨解旱</pre>
+              <div class="image">
+              <a rel="gallery" title="6.正殿右大通擂金畫/祈雨解旱" href="images/img03/06-06_b.jpg"><img src="images/img03/imgcontent03-06-06.jpg" width="290" height="218" />
+              <span>放大查看</span></a>
+              </div>
+              </div>
+              </div>
+              <div class="imgcontent">
+              <div class="leftbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">7.正殿明間木牌樓</pre>
+              <div class="image">
+              <a rel="gallery" title="7.正殿明間木牌樓" href="images/img03/06-07_b.jpg"><img src="images/img03/imgcontent03-06-07.jpg" width="290" height="218" />
+              <span>放大查看</span></a>
+              </div>
+              </div>
+              <div class="rightbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">8.前殿右後步通背面/茂叔觀蓮</pre>
+              <div class="image">
+              <a rel="gallery" title="8.前殿右後步通背面/茂叔觀蓮" href="images/img03/06-08_b.jpg"><img src="images/img03/imgcontent03-06-08.jpg" width="290" height="218" />
+              <span>放大查看</span></a>
+              </div>
+              </div>
+              </div>
+              </div>
+            </span>
+            <span style="margin-top:50px;">
+            <div class="creat01" style="background-image:url(images/icon10.png)">
+              <p style="border:none; margin-bottom:20px; font-size:13px; margin-left:48px; color:#000000; line-height:38px; height:38px;">四大壁畫：2014~2015年，彩繪名師劉家正(號玉山人)在本巖前殿、正殿的作品。</p>
+            </div>
+            <div class="imgbox">
+              <div class="imgcontent">
+              <div class="leftbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">1.前殿左壁/顯應祖師預言靈驗</pre>
+              <div class="image">
+              <a rel="gallery" title="1.前殿左壁/顯應祖師預言靈驗" href="images/img03/07-01_b.jpg"><img src="images/img03/imgcontent03-07-01.jpg" width="290" height="218" /><span>放大查看</span></a>
+              </div>
+              </div>
+              <div class="rightbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">2.前殿右壁/顯應祖師施藥濟世</pre>
+              <div class="image">
+              <a rel="gallery" title="2.前殿右壁/顯應祖師施藥濟世" href="images/img03/07-02_b.jpg"><img src="images/img03/imgcontent03-07-02.jpg" width="290" height="218" />
+              <span>放大查看</span></a>
+              </div>
+              </div>
+              </div>
+              <div class="imgcontent">
+              <div class="leftbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">3.正殿左壁/觀音菩薩渡化眾生</pre>
+              <div class="image">
+              <a rel="gallery" title="3.正殿左壁/觀音菩薩渡化眾生" href="images/img03/07-03_b.jpg"><img src="images/img03/imgcontent03-07-03.jpg" width="290" height="218" />
+              <span>放大查看</span></a>
+              </div>
+              </div>
+              <div class="rightbox">
+              <pre style="width:100%; margin-top:0px; margin-bottom:1px; display:block;">4.正殿右壁/聖母得道升天</pre>
+              <div class="image">
+              <a rel="gallery" title="4.正殿右壁/聖母得道升天" href="images/img03/07-04_b.jpg"><img src="images/img03/imgcontent03-07-04.jpg" width="290" height="218" />
+              <span>放大查看</span></a>
+              </div>
+              </div>
+              </div>
+              </div>
+            </span>
+            <span style="margin-top:50px;">
+            <div class="creat01" style="background-image:url(images/icon11.png)">
+              <p style="border:none; margin-bottom:20px; letter-spacing:0.1em; font-size:13px; margin-left:48px; color:#000000; line-height:38px; height:38px;">六大門神：2015年，名師劉家正(主持鼎臻傳統藝術坊)在本巖前殿的門神畫作</p>
+            </div>
+            <div class="imgbox">
+              <div class="imgcontent">
+              <div class="leftboximg" style="width:120px;">
+              <div class="image">
+              <a rel="gallery" title="1.前殿中門門神 哼將軍鄭倫(青臉)" href="images/img03/08-01_b.jpg"><img src="images/img03/imgcontent03-08-01.jpg" width="120" height="327" /><span style="line-height:327px;">放大查看</span></a>
+              </div>
+              </div>
+              <div class="centerboximg">
+              <div class="image">
+              <a rel="gallery" title="1.前殿中門門神 哈將軍陳奇(紅臉)" href="images/img03/08-02_b.jpg"><img src="images/img03/imgcontent03-08-02.jpg" width="120" height="327" />
+              <span style="line-height:327px;">放大查看</span></a>
+              </div>
+              </div>
+              <div class="rightboximg">
+              <pre style="width:100%; padding-left:19px; display:block;">1.前殿中門門神
+
+   • 閉嘴哼鼻青臉│哼將軍(鄭倫)手持乾坤
+   • 開口哈氣紅臉│哈將軍(陳奇)手持定風珠
+   • 特徵│胡貌梵相、著全武甲、圍領巾、 頭戴五
+<span style="display:inline-block; width:0px; margin-left:73px; margin-top:0px;"></span>佛帽、背紮五靠旗、長耳有環、獅頭腰帶</pre>
+              </div>
+              </div>
+              </div>
+            </span>
+            <span style="margin-top:29px;">
+            <div class="imgbox">
+              <div class="imgcontent">
+              <div class="leftboximg">
+              <div class="image">
+              <a rel="gallery" title="2.前殿左門門神 南方增長天王 手持寶劍" href="images/img03/08-03_b.jpg"><img src="images/img03/imgcontent03-08-03.jpg" width="120" height="451" /><span style="line-height:451px;">放大查看</span></a>
+              </div>
+              </div>
+              <div class="centerboximg">
+              <div class="image">
+              <a rel="gallery" title="2.前殿左門門神 東方持國天王 手彈琵琶" href="images/img03/08-04_b.jpg"><img src="images/img03/imgcontent03-08-04.jpg" width="120" height="452" />
+              <span style="line-height:452px;">放大查看</span></a>
+              </div>
+              </div>
+              <div class="rightboximg">
+                <pre style="width:100%; padding-left:19px; display:block;">2.前殿左門門神
+
+   • 手持寶劍、虎虎生(風)│南方增長天王， 著虎頭腹護
+   • 手彈琵琶、曲曲精(調)│東方持國天王， 著豹頭腹護
+   • 特徵│胡貌梵相、著全武甲、頭戴五佛帽、圍領巾
+<span style="display:inline-block; width:0px; margin-left:73px; margin-top:0px;"></span>、頭光飄帶、長耳有環</pre>
+              </div>
+              </div>
+              </div>
+            </span>
+            <span style="margin-top:29px;">
+            <div class="imgbox">
+              <div class="imgcontent">
+              <div class="leftboximg">
+              <div class="image">
+              <a rel="gallery" title="3.前殿右門門神 北方多聞天王 手握寶傘" href="images/img03/08-05_b.jpg"><img src="images/img03/imgcontent03-08-05.jpg" width="120" height="441" /><span style="line-height:441px;">放大查看</span></a>
+              </div>
+              </div>
+              <div class="centerboximg">
+              <div class="image">
+              <a rel="gallery" title="3.前殿右門門神 西方廣目天王 手臂纏龍" href="images/img03/08-06_b.jpg"><img src="images/img03/imgcontent03-08-06.jpg" width="120" height="441" />
+              <span style="line-height:441px;">放大查看</span></a>
+              </div>
+              </div>
+              <div class="rightboximg">
+              <pre style="width:100%; padding-left:19px; display:block;">3.前殿右門門神
+
+   • 手握寶傘、適時晴(雨)│北方多聞天王， 著獅頭腹護
+   • 手臂纏龍、諸事吉(順)│西方廣目天王， 著象頭腹護
+   • 特徵│胡貌梵相、著全武甲、頭戴五佛帽、圍領巾
+<span style="display:inline-block; width:0px; margin-left:73px; margin-top:0px;"></span>、頭光飄帶、長耳有環</pre>
+              </div>
+              </div>
+              </div>
+            </span>
+            </div>
+        </div>
+        <!--這裡是繁華彩繪結束-->
+      </div>
+    </div>
+  </div>
+  <footer>
+<div class="fc">
+<div class="column">
+<div class="flogo"><img src="images/footer.png" width="331" height="164" /></div>
+<div class="finfo">
+<p>地址  │   新北市泰山區應化街32號</p>
+<p>電話  │   (02)29018371</p>
+<p>傳真  │   (02)29042420</p>
+<p>信箱  │    <a href="mailto:up.temple@msa.hinet.net">up.temple@msa.hinet.net</a></p>
+</div>
+</div>
+<div class="column" style="line-height:25px; margin-top:45px;">
+<div class="cl" style="font-size:15px; line-height:25px;">
+  <h3>關於頂泰山巖 </h3>
+  <p><a href="about.html">頂泰山巖簡介</a></p>
+        <p><a href="about01.html">金面顯應祖師</a></p>
+        <p><a href="about02.html">大事年表</a></p>
+        <p><a href="about03.html">歷次整建</a></p>
+        <p><a href="about04.html">董監事會</a></p>
+        <p style="font-family: "cwTeXHei";"><a href="about05.html">分靈廟</a></p>
+</div>
+<div class="cc" style="font-size:15px; line-height:25px;">
+  <h3>工藝與建築之美 </h3>
+  <p><a href="crafts_build.html">大木結構</a></p>
+        <p><a href="crafts_build01.html">泥陶塑造</a></p>
+        <p><a href="crafts_build02.html">石作石雕</a></p>
+        <p><a href="crafts_build03.html">精雕木作</a></p>
+        <p><a href="crafts_build04.html">繁華彩繪</a></p>
+        <p><a href="crafts_build05.html">匾額楹聯</a></p>
+</div>
+<div class="cr" style="font-size:15px; line-height:25px;">
+  <h3>奉祀神佛 </h3>
+  <p><a href="buddha.html">參拜路線圖</a></p>
+</div>
+</div>
+</div>
+<div class="copyright">財團法人新北市泰山巖版權所有‧轉載必究　2015 Copyright © UpTemple. All Right Reserved.　資料提供：本巖顧問、新北市泰山區文史協會創會理事長 張仁甫.　網頁設計by<a href="http://www.chrisliou.com" target="_blank">克里斯劉設計工作室</a></div>
+</footer>
+</div>
+</body>
+</html>
